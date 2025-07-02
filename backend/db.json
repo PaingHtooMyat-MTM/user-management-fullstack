@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": 1751446997263,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "admin"
+    },
+    {
+      "id": 1751446997264,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "viewer"
+    },
+    {
+      "id": 1751446997265,
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "viewer"
+    },
+    {
+      "id": 1751446997266,
+      "name": "Bob Lee",
+      "email": "bob@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "admin"
+    },
+    {
+      "id": 1751446997267,
+      "name": "Charlie Brown",
+      "email": "charlie@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "viewer"
+    },
+    {
+      "id": 1751446997268,
+      "name": "Daisy Miller",
+      "email": "daisy@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "viewer"
+    },
+    {
+      "id": 1751446997269,
+      "name": "Ethan Hunt",
+      "email": "ethan@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "admin"
+    },
+    {
+      "id": 1751446997270,
+      "name": "Fiona Gallagher",
+      "email": "fiona@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "viewer"
+    },
+    {
+      "id": 1751446997271,
+      "name": "George Michael",
+      "email": "george@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "viewer"
+    },
+    {
+      "id": 1751446997272,
+      "name": "Hannah Baker",
+      "email": "hannah@example.com",
+      "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
+      "role": "admin"
+    }
+  ]
+}
