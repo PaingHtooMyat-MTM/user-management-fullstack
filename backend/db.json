@@ -69,6 +69,13 @@
       "email": "hannah@example.com",
       "password": "$2b$10$V3W/Fv6uhKJmppHYEM2XFeoAnzTLMiDutKPh7NmVDEbnXuhxOyCrC",
       "role": "admin"
+    },
+    {
+      "id": 1751510156104,
+      "name": "asdd",
+      "email": "asdd@gmail.com",
+      "password": "$2b$10$rIhPz/cdrV3y7UkKG1pH8eIrSYrUW9s9QB.lDSLPCv0SARzR6dUKy",
+      "role": "viewer"
     }
   ]
 }

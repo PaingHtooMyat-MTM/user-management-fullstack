@@ -2,6 +2,9 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import axios from 'axios'
 import { jwtDecode } from 'jwt-decode'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 export const useUserStore = defineStore('userStore', () => {
   const users = ref([])
@@ -47,8 +50,8 @@ export const useUserStore = defineStore('userStore', () => {
       const index = users.value.findIndex((u) => u.id === userData.id)
       if (index !== -1) users.value[index] = res.data
 
-      // 🔥 Check if current user edited themselves
-      if (userData.id === currentUser.value?.id) {
+      // Check if current user edited themselves
+      if (userData.id === currentUser.value?.id && userData.role !== currentUser.value.role) {
         alert('Your role has changed. Please log in again to apply changes.')
         logout()
         router.push('/login')
@@ -64,7 +67,7 @@ export const useUserStore = defineStore('userStore', () => {
       await axios.delete(`http://localhost:5001/users/${userId}`)
       users.value = users.value.filter((u) => u.id !== userId)
 
-      // 🔥 If the logged-in user banned themselves
+      // If the logged-in user banned themselves
       if (userId === currentUser.value?.id) {
         alert('You have deleted your own account. Logging out.')
         logout()
@@ -148,6 +151,6 @@ export const useUserStore = defineStore('userStore', () => {
     login,
     logout,
     register,
-    fetchProfile, // Profile fetch
+    fetchProfile,
   }
 })

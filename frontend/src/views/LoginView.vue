@@ -35,13 +35,15 @@ const handleLogin = async () => {
     password.value = ''
 
     router.push('/')
-  } catch (validationError) {
-    if (validationError.inner) {
-      validationError.inner.forEach((err) => {
-        errors.value[err.path] = err.message
+  } catch (err) {
+    if (err.inner) {
+      // Validation errors from Yup
+      err.inner.forEach((e) => {
+        errors.value[e.path] = e.message
       })
     } else {
-      alert(userStore.error || 'Validation failed')
+      // Backend/server error (e.g., wrong email/password)
+      errors.value.general = userStore.error || 'Invalid email or password'
     }
   }
 }
@@ -51,6 +53,9 @@ const handleLogin = async () => {
   <div class="flex justify-center items-center h-screen">
     <form @submit.prevent="handleLogin" class="p-6 rounded shadow-xl w-96 bg-white">
       <h2 class="text-2xl font-bold mb-4">Login</h2>
+      <p v-if="errors.general" class="text-red-500 text-sm mb-2">
+        {{ errors.general }}
+      </p>
       <div class="space-y-4">
         <!-- Email -->
         <div>

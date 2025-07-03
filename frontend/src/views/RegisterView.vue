@@ -50,7 +50,7 @@ const handleRegister = async () => {
         errors.value[err.path] = err.message
       })
     } else {
-      alert('Validation failed')
+      errors.value.general = userStore.error || 'Invalid email or password'
     }
   }
 }
@@ -60,6 +60,9 @@ const handleRegister = async () => {
   <div class="flex justify-center items-center h-screen">
     <form @submit.prevent="handleRegister" class="p-6 rounded shadow-xl w-96 bg-white">
       <h2 class="text-2xl font-bold mb-4">Register</h2>
+      <p v-if="errors.general" class="text-red-500 text-sm mb-2">
+        {{ errors.general }}
+      </p>
       <div class="space-y-4">
         <!-- Name -->
         <div>
@@ -69,7 +72,7 @@ const handleRegister = async () => {
             placeholder="Name"
             class="w-full border border-gray-300 rounded px-4 py-2"
           />
-          <p v-if="errors.name" class="text-red-500 text-sm mt-1">{{ errors.name }}</p>
+          <p v-if="errors.password" class="text-red-500 text-sm mt-1">{{ errors.password }}</p>
         </div>
 
         <!-- Email -->
